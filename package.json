@@ -1,0 +1,51 @@
+{
+  "name": "react-recast",
+  "version": "1.0.0",
+  "description": "A general-purpose reducer for React",
+  "main": "dist/reducer.cjs.js",
+  "module": "dist/reducer.es.js",
+  "types": "dist/reducer.d.ts",
+  "unpkg": "dist/reducer.umd.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c && npm run uglify",
+    "uglify": "uglifyjs dist/reducer.umd.js --compress --mangle --output dist/reducer.umd.min.js"
+  },
+  "homepage": "https://github.com/sanonz/react-recast",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanonz/react-recast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanonz/react-recast/issues"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "context",
+    "reducer"
+  ],
+  "author": "Sanonz <sanonz@126.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "lodash-es": "^4.0.0"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.49",
+    "rollup-plugin-typescript2": "^0.27.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@types/lodash-es": "^4.17.3",
+    "lodash-es": "^4.17.15",
+    "react": "^16.13.1",
+    "rollup": "^2.27.1",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2",
+    "uglify-js": "^3.10.4"
+  }
+}
