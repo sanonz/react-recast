@@ -1,11 +1,11 @@
 {
   "name": "react-recast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A general-purpose reducer for React",
   "main": "dist/reducer.cjs.js",
   "module": "dist/reducer.es.js",
   "types": "dist/reducer.d.ts",
-  "unpkg": "dist/reducer.umd.js",
+  "unpkg": "dist/reducer.umd.min.js",
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c && npm run uglify",
