@@ -1,4 +1,4 @@
-import { merge, pull, pullAll, pullAt } from 'lodash-es';
+import { isArray, mergeWith, pull, pullAll, pullAt } from 'lodash-es';
 
 export type PartialDeep<T> = {
   [P in keyof T]?: T[P] extends Array<infer I>
@@ -24,7 +24,11 @@ export function mapReducer<State>(state: State, action: MapActions<State>) {
       return action.payload;
 
     case 'merge':
-      return merge({}, state, action.payload);
+      return mergeWith({}, state, action.payload, (objValue, srcValue) => {
+        if (isArray(objValue)) {
+          return srcValue;
+        }
+      });
 
     default:
       throw new Error();
